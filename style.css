@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-font-family: 'Roboto', sans-serif;
+    /* --; */
+}
+
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+}
+
+.smooth-transition {
+    transition: background-color 300ms;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .dark-mode {
+        background-color: white;
+        color: black;
+    }
+
+    body {
+        background-color: black;
+        color: white;
+    }
+
+}
+
+div {
+    position: absolute;
+    background-color: grey;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    bottom: 0;
+    margin: 30px;
+}
+
+div:hover {
+    background-color: darkgray;
+}
