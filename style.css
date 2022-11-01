@@ -2,53 +2,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
-    --body-font-family: 'Roboto', sans-serif;
-    /* --; */
+    --color: black;
+    --color-dark: #673AB7;
 }
 
-
-@media screen and (prefers-color-scheme: light) {
-    body {
-        background-color: white;
-        color: black;
-    }
-
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
+.dark-mode{
+    background-color: #121212;
 }
 
-.smooth-transition {
-    transition: background-color 300ms;
+.dark, .light {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: left;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    .dark-mode {
-        background-color: white;
-        color: black;
-    }
-
-    body {
-        background-color: black;
-        color: white;
-    }
-
+.dark-mode > .dark > .text{
+    color: var(--color-dark);
+    display: flex;
+    font-weight: 1000;
 }
 
-div {
+.dark > .text, .light > .text {
+    font-size: 10rem;
+}
+
+.dark > .text {
+    display: none;
+}
+
+.dark-mode > .light > .text {
+    display: none;
+}
+
+.light > .text {
+    display: flex;
+    color: grey;
+    font-weight: 1000;
+}
+
+button {
     position: absolute;
-    background-color: grey;
-    width: 3.5rem;
-    height: 3.5rem;
+    background-color: transparent;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     bottom: 0;
-    margin: 30px;
+    margin: 40px;
+    border: none;
+    font-size: 4rem;
 }
 
-div:hover {
-    background-color: darkgray;
+
+button > .sun {
+    display: none;
+}
+
+.dark-mode > button > .sun {
+    display: flex;
+}
+
+.dark-mode > button > .moon{
+    display: none;
+}
+
+button:hover {
+    /* background-color: darkgray; */
 }
