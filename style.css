@@ -11,10 +11,12 @@
 }
 
 body {
+    transition: 0.3s;
     background-color: rgb(238, 238, 238);
 }
 
 .dark-mode{
+    transition: 0.3s;
     background-color: #121212;
 }
 
@@ -41,13 +43,13 @@ body {
     display: none;
 }
 
-.dark-mode > .light > .text {
+.dark-mode > .light > .text {   
     display: none;
 }
 
 .light > .text {
     display: flex;
-    color: grey;
+    color: rgb(110, 110, 110);
     font-weight: 1000;
 }
 
@@ -76,6 +78,6 @@ button > .sun {
     display: none;
 }
 
-button:hover {
-    /* background-color: darkgray; */
+button:active {
+    transform: scale(0.95);
 }
